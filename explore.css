@@ -1,0 +1,499 @@
+/* stop blue/underline links anywhere */
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; text-decoration: none; }
+
+body{
+  background:#000;
+  color:#e7e9ea;
+}
+
+/* ===== Sidebar (same system as home.css) ===== */
+.logo-pill{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:999px;
+  color:#fff;
+}
+.logo-pill:hover{ background:rgba(255,255,255,0.08); }
+
+.nav-link-x{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px;
+  border-radius:999px;
+  color:#fff;
+  font-size:18px;
+  line-height:1;
+}
+.nav-link-x:hover{ background:rgba(255,255,255,0.08); color:#fff; }
+.nav-link-x.active .x-nav__text{ font-weight:800; }
+
+.x-nav__icon{
+  width:28px;
+  display:flex;
+  justify-content:center;
+  font-size:20px;
+}
+
+.badge-x{
+  position:absolute;
+  top:6px;
+  left:22px;
+  background:#1d9bf0;
+  color:#fff;
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:999px;
+}
+
+.hover-dark:hover{ background:rgba(255,255,255,0.08); }
+
+.avatar-sm{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;      /* VERY IMPORTANT */
+  flex-shrink:0;
+  background:#222;
+}
+
+.avatar-sm img{
+  width:100%;
+  height:100%;
+  object-fit:cover;     /* prevents stretching */
+  display:block;
+}
+
+/* ===== Explore page styles ===== */
+.search-pill{
+  border:1px solid #2f3336;
+  border-radius:999px;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#0b0b0b;
+}
+.search-input{
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#fff;
+  width:100%;
+}
+
+.icon-pill{
+  width:40px;height:40px;border-radius:999px;
+  border:none;background:transparent;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.icon-pill:hover{ background:#0f0f0f; }
+.icon-pill-sm{ width:36px; height:36px; }
+
+.tabx{
+  flex:1;
+  border:none;
+  background:transparent;
+  color:#71767b;
+  font-weight:800;
+  padding:12px 0;
+}
+.tabx:hover{ background:#0f0f0f; color:#fff; }
+.tabx.active{ color:#fff; position:relative; }
+.tabx.active::after{
+  content:"";
+  position:absolute;
+  left:22%;
+  right:22%;
+  bottom:-1px;
+  height:4px;
+  border-radius:999px;
+  background:#1d9bf0;
+}
+
+.cardx{
+  border:1px solid #2f3336;
+  background:black;
+  border-radius:16px;
+  padding:14px;
+}
+
+.newsrow,
+.sideitem{
+  display:block;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+  color:#fff;
+}
+
+.newsrow:hover,
+.sideitem:hover{
+  background:rgba(255,255,255,0.02);
+  margin:0 -12px;
+  padding:12px;
+  border-radius:10px;
+}
+
+.trendrow{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:14px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.mini-pic{
+  width:40px;height:40px;border-radius:999px;
+  border:1px solid #2f3336;
+}
+
+.float-stack{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.float-btn{
+  width:56px;height:56px;
+  border-radius:16px;
+  border:1px solid #2f3336;
+  background:#0a0a0a;
+  color:#fff;
+}
+.float-btn:hover{ background:#101010; }
+
+/* wrapper so dropdown can position under the input */
+.search-wrap{
+  position: relative;
+}
+
+/* dropdown panel */
+.recent-drop{
+  position: absolute;
+  top: 52px;              /* drops under the search bar */
+  left: 0;
+  width: 100%;
+  background: #000;
+  border: 1px solid #2f3336;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  overflow: hidden;
+
+  /* hidden by default */
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: .15s ease;
+  z-index: 50;
+}
+
+/* show it when input is focused */
+.search-wrap:focus-within .recent-drop{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* header */
+.recent-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 16px;
+}
+.recent-title{
+  font-weight: 800;
+  font-size: 20px;
+}
+.recent-clear{
+  color:#1d9bf0;
+  text-decoration:none;
+  font-weight:600;
+}
+.recent-clear:hover{ text-decoration: underline; }
+
+/* list */
+.recent-list{
+  max-height: 420px;
+  overflow:auto;
+  padding-bottom: 6px;
+}
+
+/* row */
+.recent-item{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.recent-item:hover{
+  background: rgba(255,255,255,0.06);
+}
+
+/* avatars */
+/* Recent dropdown avatar (FIX: stop stretching) */
+.recent-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;        /* ✅ crops image into circle */
+  flex:0 0 40px;          /* ✅ fixed width in flex row */
+  background:#222;
+}
+
+.recent-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;       /* ✅ fills circle without stretching */
+  display:block;          /* ✅ removes inline-img weird spacing */
+}
+.recent-icon{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#8b98a5;
+  flex: 0 0 40px;
+}
+
+/* fake avatar colors (replace with your images later) */
+.av1{ background: #0f3; opacity:.35; }
+.av2{ background: #3af; opacity:.35; }
+.av3{ background: #fff; opacity:.18; }
+.av4{ background: #0f0; opacity:.20; }
+
+.recent-meta{ min-width:0; }
+.recent-name{
+  font-weight:800;
+  color:#fff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.recent-name.plain{ font-weight:600; }
+.recent-handle{
+  color:#8b98a5;
+  font-size: 14px;
+}
+
+/* right X */
+.recent-x{
+  margin-left:auto;
+  width:34px;height:34px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;
+  color:#1d9bf0;
+}
+.recent-x:hover{
+  background: rgba(29,155,240,0.15);
+}
+
+/* --- X-like Recent dropdown tweaks (override) --- */
+.search-wrap{
+  position: relative;
+}
+
+/* make the dropdown look like X and sit above content */
+.recent-drop{
+  top: calc(100% + 10px);     /* instead of hard 52px */
+  background: #0b0b0b;        /* match your cards */
+  border: 1px solid #2f3336;
+  box-shadow: 0 12px 35px rgba(0,0,0,.75);
+  z-index: 9999;
+}
+
+/* hide scrollbar look a bit nicer (optional) */
+.recent-list{
+  scrollbar-width: thin;                 /* firefox */
+  scrollbar-color: #2f3336 transparent;  /* firefox */
+}
+.recent-list::-webkit-scrollbar{
+  width: 10px;
+}
+.recent-list::-webkit-scrollbar-thumb{
+  background: #2f3336;
+  border-radius: 999px;
+}
+.recent-list::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.follow-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.follow-row:first-of-type{
+  border-top:none;
+}
+
+.follow-row:hover{
+  background:rgba(255,255,255,0.02);
+  margin:0 -14px;     /* ✅ matches cardx padding */
+  padding:12px 14px;
+  border-radius:10px;
+}
+
+/* ONLY for middle feed "Who to follow" */
+.followrow-mid{
+  border-top:1px solid rgba(255,255,255,0.05);
+  padding:14px 0;
+}
+
+.followrow-mid:hover{
+  background:rgba(255,255,255,0.02);
+  margin:0 -16px;     /* expand like trends */
+  padding:14px 16px;
+}
+.cardx h3{
+  margin-bottom: 10px !important;
+}
+
+/* post layout */
+.post{
+  display:flex;
+  gap:12px;
+  padding:14px 16px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* avatar MUST be fixed size */
+.post-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 44px;          /* ✅ prevents stretching */
+  border:1px solid #2f3336;
+}
+
+/* content column must be allowed to shrink correctly */
+.post-body{
+  flex:1;
+  min-width:0;
+}
+
+/* top row */
+.post-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.post-meta{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+  flex-wrap:wrap;
+}
+
+/* image container */
+.post-media{
+  margin-top:10px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #2f3336;
+}
+
+/* image MUST fill width */
+.post-img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}
+
+/* ===== POSTS (force clean styles) ===== */
+.feed-title{
+  font-size: 22px;
+  font-weight: 800;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.post{
+  display:flex;
+  gap:12px;
+  padding:14px 16px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.post-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 44px;
+  border:1px solid #2f3336;
+}
+
+.post-body{ flex:1; min-width:0; }
+
+.post-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.post-meta{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.post-handle,.post-time,.post-dot{ color:#71767b; font-size:14px; }
+.post-name{ font-weight:800; }
+
+.post-text{ margin-top:6px; font-size:15px; line-height:1.35; }
+
+/* THIS removes the "input box" look */
+.post-media{
+  margin-top:10px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #2f3336;
+  background: transparent;
+}
+.post-img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:none;
+  outline:none;
+  border-radius:0;
+}
+
+/* Fix white-square buttons */
+.post-bottom{
+  margin-top:10px;
+  display:flex;
+  justify-content:space-between;
+  max-width:420px;
+}
+
+.post-icon, .icon-btn{
+  border:none !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:#71767b;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+}
+
+.post-icon:hover, .icon-btn:hover{
+  background: rgba(255,255,255,0.06) !important;
+  color:#fff;
+}

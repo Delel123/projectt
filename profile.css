@@ -1,0 +1,518 @@
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; text-decoration: none; }
+
+body{
+  background:#000;
+  color:#e7e9ea;
+}
+
+/* ===== Sidebar (same system as home.css) ===== */
+.logo-pill{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:999px;
+  color:#fff;
+}
+.logo-pill:hover{ background:rgba(255,255,255,0.08); }
+
+.nav-link-x{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px;
+  border-radius:999px;
+  color:#fff;
+  font-size:18px;
+  line-height:1;
+}
+.nav-link-x:hover{ background:rgba(255,255,255,0.08); color:#fff; }
+.nav-link-x.active .x-nav__text{ font-weight:800; }
+
+.x-nav__icon{
+  width:28px;
+  display:flex;
+  justify-content:center;
+  font-size:20px;
+}
+
+.badge-x{
+  position:absolute;
+  top:6px;
+  left:22px;
+  background:#1d9bf0;
+  color:#fff;
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:999px;
+}
+
+.hover-dark:hover{ background:rgba(255,255,255,0.08); }
+
+
+.avatar-sm{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;      /* VERY IMPORTANT */
+  flex-shrink:0;
+  background:#222;
+}
+
+.avatar-sm img{
+  width:100%;
+  height:100%;
+  object-fit:cover;     /* prevents stretching */
+  display:block;
+}
+
+/* ===== Profile styles ===== */
+.topbar{
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(6px);
+}
+
+.icon-pill{
+  width:38px;height:38px;
+  border:none;border-radius:999px;
+  background:transparent;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.icon-pill:hover{ background:#0f0f0f; }
+
+.hover-pill:hover{ background:#0f0f0f; }
+
+.banner{
+  height:190px;
+  background:#3a3a3a;
+  position:relative;
+}
+
+/* the block under banner needs to be relative so avatar can sit correctly */
+.profile-head{
+  position:relative;
+}
+
+/* Avatar overlap like X */
+.avatar-overlap{
+  position:absolute;
+  left:16px;
+  top:-65px; /* overlaps the banner */
+}
+
+.avatar-big{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid #000;
+  object-fit:cover;
+  background:#000;
+}
+
+/* Right side search + card */
+.search-pill{
+  border:1px solid #2f3336;
+  background:#0b0b0b;
+  border-radius:999px;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.search-input{
+  width:100%;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#fff;
+}
+
+.cardx{
+  border:1px solid #2f3336;
+  background: black;
+  border-radius:16px;
+  padding:14px;
+}
+
+.mini-pic{
+  width:40px;height:40px;border-radius:999px;
+  border:1px solid #2f3336;
+  background:linear-gradient(140deg,#00bbf9,#f15bb5);
+}
+
+.post-avatar{
+  width:44px;height:44px;border-radius:999px;
+  border:1px solid #2f3336;
+  background: linear-gradient(140deg, #00bbf9, #f15bb5);
+  flex:0 0 44px;
+}
+
+/* Floating buttons */
+.float-stack{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.float-btn{
+  width:56px;height:56px;
+  border-radius:16px;
+  border:1px solid #2f3336;
+  background:#0a0a0a;
+  color:#fff;
+}
+.float-btn:hover{ background:#101010; }
+
+/* ===== PROFILE TABS (exact X-like) ===== */
+.profile-tabs{
+  border-bottom:1px solid #2f3336 !important;
+}
+
+.profile-tabs .nav-item{
+  position:relative;
+}
+
+.tabx{
+  color:rgb(113,118,123) !important;
+  font-weight:600;
+  padding:14px 0 !important;
+  width:100%;
+  display:block;
+  position:relative;
+}
+
+.tabx:hover{
+  background:rgba(255,255,255,0.06);
+  color:#fff !important;
+}
+
+.tabx.active{
+  color:#fff !important;
+}
+
+.tabx.active::after{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:50%;
+  transform:translateX(-50%);
+  width:56px;
+  height:4px;
+  background:#1d9bf0;
+  border-radius:999px;
+}
+
+/* wrapper so dropdown positions under the input */
+.search-wrap{
+  position: relative;
+}
+
+/* dropdown panel */
+.recent-drop{
+  position: absolute;
+  top: 52px;           /* sits right under the search pill */
+  left: 0;
+  width: 100%;
+  background: #000;
+  border: 1px solid #2f3336;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+  overflow: hidden;
+
+  /* hidden by default */
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: .15s ease;
+  z-index: 9999;       /* important so it sits above cards */
+}
+
+/* show it when input is focused */
+.search-wrap:focus-within .recent-drop{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* header */
+.recent-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 16px;
+}
+.recent-title{
+  font-weight: 800;
+  font-size: 20px;
+}
+.recent-clear{
+  color:#1d9bf0;
+  text-decoration:none;
+  font-weight:600;
+}
+.recent-clear:hover{ text-decoration: underline; }
+
+/* list */
+.recent-list{
+  max-height: 420px;
+  overflow:auto;
+  padding-bottom: 6px;
+}
+
+/* row */
+.recent-item{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.recent-item:hover{
+  background: rgba(255,255,255,0.06);
+}
+
+/* avatars */
+.recent-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;          /* CLIP the image to the circle */
+  flex:0 0 40px;
+  background:#222;
+}
+
+.recent-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;         /* fill the circle nicely */
+  display:block;
+}
+
+.recent-icon{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#8b98a5;
+  flex: 0 0 40px;
+}
+
+/* fake avatar colors (replace with images later) */
+.av1{ background: #0f3; opacity:.35; }
+.av2{ background: #3af; opacity:.35; }
+.av3{ background: #fff; opacity:.18; }
+.av4{ background: #0f0; opacity:.20; }
+
+.recent-meta{ min-width:0; }
+.recent-name{
+  font-weight:800;
+  color:#fff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.recent-name.plain{ font-weight:600; }
+.recent-handle{
+  color:#8b98a5;
+  font-size: 14px;
+}
+
+/* right X */
+.recent-x{
+  margin-left:auto;
+  width:34px;height:34px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;
+  color:#1d9bf0;
+}
+.recent-x:hover{
+  background: rgba(29,155,240,0.15);
+}
+
+.trending-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+}
+
+.trend-item:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+
+.trend-category {
+  font-size: 13px;
+  color: rgb(113,118,123);
+}
+
+.trend-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.show-more {
+  display: block;
+  margin-top: 12px;
+  color: #1d9bf0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.show-more:hover {
+  text-decoration: underline;
+}
+
+.card-x {
+  background: black;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #2f3336;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.trend-item {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.trend-item:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+
+.trend-category {
+  font-size: 13px;
+  color: rgb(113,118,123);
+}
+.show-more:hover {
+  text-decoration: underline;
+}
+
+/* ===== Get verified hover (match X) ===== */
+.verify-btn{
+  border-color:#2f3336 !important;
+  color:#e7e9ea !important;
+  background:transparent !important;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.verify-btn i{
+  color:#1d9bf0; /* blue check */
+}
+
+/* hover state like your right image */
+.verify-btn:hover{
+  background: rgba(255,255,255,0.06) !important;  /* dark hover fill */
+  border-color: rgba(255,255,255,0.18) !important; /* subtle brighter border */
+  color:#fff !important;
+}
+
+/* keep it nice when clicked */
+.verify-btn:active{
+  background: rgba(255,255,255,0.09) !important;
+}
+
+/* ===== Edit profile button (X-style hover) ===== */
+.edit-btn{
+  border-color:#2f3336 !important;
+  color:#e7e9ea !important;
+  background:transparent !important;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.edit-btn:hover{
+  background: rgba(255,255,255,0.06) !important;   /* dark fill */
+  border-color: rgba(255,255,255,0.18) !important; /* subtle brighter border */
+  color:#fff !important;
+}
+
+.edit-btn:active{
+  background: rgba(255,255,255,0.09) !important;
+}
+
+/* tweet hover like home page */
+.tweet-hover:hover{
+  background: rgba(255,255,255,0.03);
+}
+
+/* ============================= */
+/* PROFILE TWEET ACTIONS SYSTEM */
+/* ============================= */
+
+.tweet-actions .action{
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  cursor:pointer;
+  color:#71767b;
+  transition: all .2s ease;
+}
+
+/* Tooltip */
+.tweet-actions .action::after{
+  content: attr(data-label);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #536471;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity .15s ease;
+  z-index: 100;
+}
+
+.tweet-actions .action:hover::after{
+  opacity: 1;
+}
+
+/* ============================= */
+/* HOVER COLORS (exact like X)  */
+/* ============================= */
+
+/* Reply - Blue */
+.action.comment:hover{
+  color:#1d9bf0;
+  background:rgba(29,155,240,0.1);
+}
+
+/* Repost - Green */
+.action.repost:hover{
+  color:#00ba7c;
+  background:rgba(0,186,124,0.1);
+}
+
+/* Like - Pink/Red */
+.action.like:hover{
+  color:#f91880;
+  background:rgba(249,24,128,0.1);
+}
+
+/* View - Blue */
+.action.view:hover{
+  color:#1d9bf0;
+  background:rgba(29,155,240,0.1);
+}
+
+/* Bookmark - Blue */
+.action.bookmark:hover{
+  color:#1d9bf0;
+  background:rgba(29,155,240,0.1);
+}
+
+/* Share - Blue */
+.action.share:hover{
+  color:#1d9bf0;
+  background:rgba(29,155,240,0.1);
+}

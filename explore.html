@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="explore.css"/>
+</head>
+
+<body class="bg-black text-white">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+
+      <!-- LEFT SIDEBAR (same HTML as Home/Profile) -->
+      <aside class="col-12 col-md-3 col-lg-3 col-xl-2 d-none d-md-block border-end border-dark">
+        <div class="vh-100 position-sticky top-0 d-flex flex-column py-2">
+
+          <a href="home.html" class="logo-pill mb-2" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <nav class="nav flex-column gap-1">
+            <a class="nav-link-x" href="home.html">
+              <span class="x-nav__icon"><i class="fa-solid fa-house"></i></span>
+              <span class="x-nav__text">Home</span>
+            </a>
+
+            <a class="nav-link-x active" href="explore.html">
+              <span class="x-nav__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span class="x-nav__text">Explore</span>
+            </a>
+
+            <a class="nav-link-x position-relative" href="notifications.html">
+              <span class="x-nav__icon"><i class="fa-regular fa-bell"></i></span>
+              <span class="x-nav__text">Notifications</span>
+              <!-- <span class="badge-x">1</span> -->
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-regular fa-envelope"></i></span>
+              <span class="x-nav__text">Chat</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+              <span class="x-nav__text">Grok</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-regular fa-bookmark"></i></span>
+              <span class="x-nav__text">Bookmarks</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-user-pen"></i></span>
+              <span class="x-nav__text">Creator Studio</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-x"></i></span>
+              <span class="x-nav__text">Premium</span>
+              <!-- <span class="ms-2 badge rounded-pill text-bg-primary small">50% off</span> -->
+            </a>
+
+            <a class="nav-link-x" href="profile.html">
+              <span class="x-nav__icon"><i class="fa-regular fa-user"></i></span>
+              <span class="x-nav__text">Profile</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-ellipsis"></i></span>
+              <span class="x-nav__text">More</span>
+            </a>
+          </nav>
+
+          <button class="btn btn-light fw-bold rounded-pill w-100 mt-3" type="button">Post</button>
+
+          <div class="d-flex align-items-center gap-2 mt-auto p-2 rounded-pill hover-dark">
+            <div class="avatar-sm">
+              <img src="bobb.jpg">
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-bold small">spida123</div>
+              <div class="text-secondary small">@lol12345120</div>
+            </div>
+            <i class="fa-solid fa-ellipsis text-secondary"></i>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- MIDDLE -->
+      <main class="col-12 col-md-6 col-lg-6 col-xl-5 border-end border-dark px-0">
+
+        <!-- Sticky header -->
+<div class="sticky-top bg-black border-bottom border-dark p-3">
+  <div class="d-flex gap-2 align-items-center">
+
+    <!-- wrap search + dropdown together -->
+    <div class="search-wrap flex-grow-1">
+
+      <div class="search-pill">
+        <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+        <input class="search-input" placeholder="Search" />
+      </div>
+
+      <!-- ✅ DROPDOWN (Recent) goes RIGHT HERE -->
+      <div class="recent-drop">
+        <div class="recent-head">
+          <div class="recent-title">Recent</div>
+          <a href="#" class="recent-clear">Clear all</a>
+        </div>
+
+        <div class="recent-list">
+          <a href="#" class="recent-item">
+            <div class="recent-avatar">
+              <img src="fantasy football scout.png">
+            </div>
+            <div class="recent-meta">
+              <div class="recent-name">
+                Fantasy Football Scout <i class="fa-solid fa-circle-check text-primary"></i>
+              </div>
+              <div class="recent-handle">@FFScout</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+
+          <a href="#" class="recent-item">
+            <div class="recent-avatar">
+              <img src="legion hoops.jpg">
+            </div>
+            <div class="recent-meta">
+              <div class="recent-name">
+                Legion Hoops <i class="fa-solid fa-circle-check text-primary"></i>
+              </div>
+              <div class="recent-handle">@LegionHoops</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+
+          <a href="#" class="recent-item">
+            <div class="recent-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="recent-meta">
+              <div class="recent-name plain">nba</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+
+          <a href="#" class="recent-item">
+            <div class="recent-avatar">
+              <img src="drake.png">
+            </div>
+            <div class="recent-meta">
+              <div class="recent-name">
+                Drizzy <i class="fa-solid fa-circle-check text-primary"></i>
+              </div>
+              <div class="recent-handle">@Drake</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+
+          <a href="#" class="recent-item">
+            <div class="recent-avatar">
+              <img src="ltfpl.jpg">
+            </div>
+            <div class="recent-meta">
+              <div class="recent-name">
+                Andy <i class="fa-solid fa-circle-check text-primary"></i>
+              </div>
+              <div class="recent-handle">@LetsTalk_FPL</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+
+          <a href="#" class="recent-item">
+            <div class="recent-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="recent-meta">
+              <div class="recent-name plain">lets talk fpl</div>
+            </div>
+            <div class="recent-x"><i class="fa-solid fa-xmark"></i></div>
+          </a>
+        </div>
+      </div>
+      <!-- ✅ end dropdown -->
+
+    </div>
+
+    <button class="icon-pill" type="button" title="Settings">
+      <i class="fa-solid fa-gear"></i>
+    </button>
+  </div>
+
+  <div class="d-flex justify-content-between mt-3">
+    <button class="tabx active" type="button">For you</button>
+    <button class="tabx" type="button">Trending</button>
+    <button class="tabx" type="button">News</button>
+    <button class="tabx" type="button">Sports</button>
+    <button class="tabx" type="button">Entertainment</button>
+  </div>
+</div>
+        
+
+        <!-- Content -->
+        <section class="p-3 border-bottom border-dark">
+          <h2 class="fw-bold fs-3 mb-3">Today's News</h2>
+
+          <a class="newsrow" href="#">
+            <div class="fw-bold fs-5">Viral Video of Black Khan Visiting Ottomans in 1440 Is Pure Satire</div>
+            <div class="text-secondary small mt-2">16 hours ago · Entertainment · 13K posts</div>
+          </a>
+
+          <a class="newsrow" href="#">
+            <div class="fw-bold fs-5">Arsenal Fan's Furious VPN Plug Steals Show After Wolves Draw</div>
+            <div class="text-secondary small mt-2">Trending now · Sports · 482 posts</div>
+          </a>
+
+          <a class="newsrow" href="#">
+            <div class="fw-bold fs-5">Arsenal Blow 2-0 Lead in Dramatic 2-2 Draw at Wolves</div>
+            <div class="text-secondary small mt-2">18 hours ago · Sports · 3.4K posts</div>
+          </a>
+        </section>
+
+        <section class="p-3">
+          <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Politics · Trending</div>
+              <div class="fw-bold">World War 3</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+
+          <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Trending in Nigeria</div>
+              <div class="fw-bold">World War III</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+
+             <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Only on X · Trending</div>
+              <div class="fw-bold">Happy New Month</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+
+             <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Politics · Trending</div>
+              <div class="fw-bold">Mossad</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+
+             <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Sports · Trending</div>
+              <div class="fw-bold">Partey</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+
+             <div class="trendrow">
+            <div>
+              <div class="text-secondary small">Business & finance · Trending</div>
+              <div class="fw-bold">$Doom</div>
+            </div>
+            <button class="icon-pill icon-pill-sm" type="button" title="More">
+              <i class="fa-solid fa-ellipsis text-secondary"></i>
+            </button>
+          </div>
+    
+          <h5 class="fw-bold mt-4 mb-3">Who to follow</h5>
+
+<div class="followrow-mid">
+  <div class="d-flex align-items-center gap-3 w-100">
+    <img src="physio.jpg" class="mini-pic">
+    <div class="flex-grow-1">
+      <div class="fw-bold">
+        The Touchline | T 
+        <i class="fa-solid fa-circle-check text-primary"></i>
+      </div>
+      <div class="text-secondary small">@TouchlineX</div>
+    </div>
+    <button class="btn btn-light btn-sm rounded-pill fw-bold px-3">
+      Follow
+    </button>
+  </div>
+</div>
+
+<div class="followrow-mid">
+  <div class="d-flex align-items-center gap-3 w-100">
+    <img src="data mb.jpg" class="mini-pic">
+    <div class="flex-grow-1">
+      <div class="fw-bold">
+        DataMB 
+        <i class="fa-solid fa-circle-check text-primary"></i>
+      </div>
+      <div class="text-secondary small">@DataMB_</div>
+    </div>
+    <button class="btn btn-light btn-sm rounded-pill fw-bold px-3">
+      Follow
+    </button>
+  </div>
+</div>
+
+<div class="followrow-mid">
+  <div class="d-flex align-items-center gap-3 w-100">
+    <img src="fpl frasier.jpg" class="mini-pic">
+    <div class="flex-grow-1">
+      <div class="fw-bold">
+        FPL Frasier 
+        <i class="fa-solid fa-circle-check text-primary"></i>
+      </div>
+      <div class="text-secondary small">@FPLfrasier</div>
+    </div>
+    <button class="btn btn-light btn-sm rounded-pill fw-bold px-3">
+      Follow
+    </button>
+  </div>
+</div>
+
+<a href="#" class="text-primary d-block mt-2">Show more</a>
+
+          
+
+          
+        </section>
+
+        <section class="feed">
+  <div class="feed-title">Posts For You</div>
+
+  <article class="post">
+    <!-- LEFT: avatar -->
+    <img src="meerkat.jpg" alt="FPL Meerkat" class="post-avatar">
+
+    <!-- RIGHT: content -->
+    <div class="post-body">
+      <div class="post-top">
+        <div class="post-meta">
+          <span class="post-name">FPL Meerkat</span>
+          <i class="fa-solid fa-circle-check text-primary"></i>
+          <span class="post-handle">@FPLMeerkat</span>
+          <span class="post-dot">·</span>
+          <span class="post-time">10h</span>
+        </div>
+
+        <button class="icon-btn" type="button" title="More">
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+      </div>
+
+      <div class="post-text">
+        Remember when people said Semenyo would be a minutes risk joining Man City?
+      </div>
+
+      <div class="post-media">
+        <img src="points.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+    </div>
+  </article>
+
+  <article class="post">
+  <img src="fabrizio romano.jpg" class="post-avatar">
+ 
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Fabrizio Romano</span>
+         <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@FabrizioRomano</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">55m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      🚨 Liam Rosenior on red cards: “I don't speak about what happened before my time at Chelsea but it’s starting to happen with me”.
+      <br>
+      <br>
+      “That's something I felt we had addressed, we went 10 games without a red card, now two in two games and that's a problem we need to solve…”.
+    </div>
+
+    
+      <div class="post-media">
+        <img src="liam.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+</article>
+<article class="post">
+  <img src="charlie.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Charlie</span>
+        <span class="post-handle">@CharlieWoodward</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">2h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      People try to compare them, just enjoy em man
+    </div>
+
+    
+      <div class="post-media">
+        <img src="vikk.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="tom hadley.jpeg" class="post-avatar">
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Tom Hadley FPL</span>
+           <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@FPL_TomHadley</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">1h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      Most enjoyable GW of the season by some distance 🥹
+    </div>
+
+    
+      <div class="post-media">
+        <img src="gw28.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="danis.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Danis</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@DanisMCFC</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">38m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      We’ve got 7 games in just 18 days…..
+    </div>
+
+    
+      <div class="post-media">
+        <img src="dias.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="alex vollo.png" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Alex Vollo</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@AlexVolloFPL</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">19m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      GW29 captain locked🔒
+    </div>
+
+    
+      <div class="post-media">
+        <img src="thiago.png" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="bakar.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">AbuBakar Siddiq</span>
+          <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@BigManBakar</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">15m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      If we don’t get positive Haaland news…
+      <br>
+      <br>
+      I might genuinely do:
+      <br>
+      <br>
+      Haaland + Rice 👉 Salah (c) + Calvert-Lewin
+      <br>
+      <br>
+      • Removes two GW31 blankers
+      <br>
+      • ⁠Removes two GW29 injury doubts
+      <br>
+      • Adds two guaranteed GW31 starters
+      <br>
+      • Gives me two big differentials
+      <br>
+      • Both with good fixtures till 31
+      <br>
+      • Big differential (c) in GW29 + 30
+      <br>
+      • No transfers needed till April
+      <br>
+      • Could have 5 FTs after WC
+      <br>
+      <br>
+      Tempting.
+    </div>
+
+    
+      <!-- <div class="post-media">
+        <img src="points.jpg" alt="Post image" class="post-img">
+      </div> -->
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="ltfpl.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Andy</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@LetsTalk_FPL</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">17m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      76 in the end for me in GW28.
+      <br>
+      <br>
+      Huge green arrow, 769th 👉 745th.
+    </div>
+
+    
+      <div class="post-media">
+        <img src="ANDYYY.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="D.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">D</span>
+        <span class="post-handle">@EideballHater99</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">44m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      How do you spend five years playing under Wenger and four years coaching under Guardiola yet your football ideology looks closer to what David Moyes produced at Everton and West Ham???
+    </div>
+
+<!--     
+      <div class="post-media">
+        <img src="points.jpg" alt="Post image" class="post-img">
+      </div> -->
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="real.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Real App</span>
+        <span class="post-handle">@realapp</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">2h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      Bro one upped himself 😭
+    </div>
+
+    
+      <div class="post-media">
+        <img src="jalen johnson.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="full court pass.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Fullcourtpasst</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@Fullcourtpass</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">3h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      All signs are pointing to Jayson Tatum returning this Friday against the <br> Dallas Mavericks, per 
+      @BillSimmons
+      <br>
+      <br>
+      (h/t@TheNBABase)
+
+    </div>
+
+    
+      <div class="post-media">
+        <img src="tatum.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="meerkat.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">FPL Meerkat</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@FPLMeerkat</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">16m</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      Early predictions on who will start out of the newly flagged players?
+      <br>
+      <br>
+      Haaland
+      <br>
+      O’Reilly
+      <br>
+      Rice
+      <br>
+      Wilson
+      <br>
+      Andersen
+      <br> 
+      Evanilson
+    </div>
+
+<!--     
+      <div class="post-media">
+        <img src="points.jpg" alt="Post image" class="post-img">
+      </div> -->
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="fpl tactician.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Andy Martin</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@fpl_tactician</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">2h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      GW29 and GW30 are the two GWs that are 9 months after footballers have their summer holidays fyi.
+      <br>
+      <br>
+      Do your due diligence before making transfers.
+    </div>
+
+    
+      <!-- <div class="post-media">
+        <img src="points.jpg" alt="Post image" class="post-img">
+      </div> -->
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="nba.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">NBA</span>
+        <span class="post-handle">@NBA</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">9h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      Join us in wishing Dylan Harper of the @Spurs a HAPPY 20th BIRTHDAY!
+    </div>
+
+    
+      <div class="post-media">
+        <img src="dylan harper.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="haaland pfp.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">Erling Haaland</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@ErlingHaaland</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">6h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      Happy 5th birthday
+    </div>
+
+    
+      <div class="post-media">
+        <img src="haaland.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+
+  <article class="post">
+  <img src="touchline.jpg" class="post-avatar">
+
+  <div class="post-body">
+
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="post-name">The Touchline | T</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span class="post-handle">@TouchlineX</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">10h</span>
+      </div>
+
+      <button class="icon-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="post-text">
+      🚨 𝗕𝗥𝗘𝗔𝗞𝗜𝗡𝗚: Pedro Neto didn't know he received his 1st yellow card after Arsenal's goal, he didn't know he was already on a yellow!
+      <br>
+      <br>
+      He is walking to the 4th official to ask where the 1st yellow card came from!
+    </div>
+
+    
+      <div class="post-media">
+        <img src="neto.jpg" alt="Post image" class="post-img">
+      </div>
+
+      <div class="post-bottom">
+        <button class="post-icon" type="button"><i class="fa-regular fa-comment"></i></button>
+        <button class="post-icon" type="button"><i class="fa-solid fa-retweet"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-heart"></i></button>
+        <button class="post-icon" type="button"><i class="fa-regular fa-bookmark"></i></button>
+        <button class="post-icon" type="button">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+      </div>
+
+  </div>
+  </article>
+</section>
+
+       
+
+      </main>
+
+      <!-- RIGHT -->
+      <aside class="col-lg-3 col-xl-3 d-none d-lg-block p-3">
+        <div class="cardx mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h3 class="m-0 fw-bold fs-5">Today's News</h3>
+            <button class="icon-pill" type="button" title="Close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <a class="sideitem" href="#">
+            <div class="fw-bold">Viral Video of Black Khan Visiting Ottomans in 1440 Is Pure Satire</div>
+            <div class="text-secondary small mt-2">16 hours ago · Entertainment · 13K posts</div>
+          </a>
+
+          <a class="sideitem" href="#">
+            <div class="fw-bold">Arsenal Fan's Furious VPN Plug Steals Show After Wolves Draw</div>
+            <div class="text-secondary small mt-2">Trending now · Sports · 482 posts</div>
+          </a>
+
+          <a class="sideitem" href="#">
+            <div class="fw-bold">Viral Video of Black Khan Visiting Ottomans in 1440 Is Pure Satire</div>
+            <div class="text-secondary small mt-2">16 hours ago · Entertainment · 13K posts</div>
+          </a>
+        </div>
+
+        <div class="cardx">
+          <h3 class="m-0 fw-bold fs-5 mb-2">Who to follow</h3>
+
+          <div class="follow-row">
+            <img src="physio.jpg" alt="man city" class="mini-pic">
+            <div class="flex-grow-1 min-w-0">
+              <div class="fw-bold text-truncate">The Touchline | T <i class="fa-solid fa-circle-check text-primary"></i></div>
+              <div class="text-secondary small text-truncate">@TouchlineX</div>
+            </div>
+            <button class="btn btn-light btn-sm rounded-pill fw-bold px-3" type="button">Follow</button>
+          </div>
+          
+
+          <div class="follow-row">
+            <img src="data mb.jpg" alt="man city" class="mini-pic">
+            <div class="flex-grow-1 min-w-0">
+              <div class="fw-bold text-truncate">DataMB <i class="fa-solid fa-circle-check text-primary"></i></div>
+              <div class="text-secondary small text-truncate">@DataMB_</div>
+            </div>
+            <button class="btn btn-light btn-sm rounded-pill fw-bold px-3" type="button">Follow</button>
+          </div>
+
+         <div class="follow-row">
+            <img src="fpl frasier.jpg" alt="man city" class="mini-pic">
+            <div class="flex-grow-1 min-w-0">
+              <div class="fw-bold text-truncate">FPL Frasier <i class="fa-solid fa-circle-check text-primary"></i></div>
+              <div class="text-secondary small text-truncate">@FPLfrasier</div>
+            </div>
+            <button class="btn btn-light btn-sm rounded-pill fw-bold px-3" type="button">Follow</button>
+          </div>
+
+          <a class="text-primary text-decoration-none d-inline-block mt-2" href="#">Show more</a>
+        </div>
+
+        <div class="float-stack">
+          <button class="float-btn" type="button" title="Post"><i class="fa-solid fa-feather-pointed"></i></button>
+          <button class="float-btn" type="button" title="Messages"><i class="fa-regular fa-envelope"></i></button>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

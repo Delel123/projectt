@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X Home</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body class="bg-black text-white">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+
+      <!-- LEFT SIDEBAR (shared with Explore + Profile) -->
+      <aside class="col-12 col-md-3 col-lg-3 col-xl-2 d-none d-md-block border-end border-dark">
+        <div class="vh-100 position-sticky top-0 d-flex flex-column py-2">
+
+          <a href="home.html" class="logo-pill mb-2" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <nav class="nav flex-column gap-1">
+            <a class="nav-link-x active" href="home.html">
+              <span class="x-nav__icon"><i class="fa-solid fa-house"></i></span>
+              <span class="x-nav__text">Home</span>
+            </a>
+
+            <a class="nav-link-x" href="explore.html">
+              <span class="x-nav__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span class="x-nav__text">Explore</span>
+            </a>
+
+            <a class="nav-link-x" href="notifications.html">
+            <span class="x-nav__icon"><i class="fa-regular fa-bell"></i></span>
+            <span class="x-nav__text">Notifications</span>
+          </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-regular fa-envelope"></i></span>
+              <span class="x-nav__text">Chat</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+              <span class="x-nav__text">Grok</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-regular fa-bookmark"></i></span>
+              <span class="x-nav__text">Bookmarks</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-user-pen"></i></span>
+              <span class="x-nav__text">Creator Studio</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-x"></i></span>
+              <span class="x-nav__text">Premium</span>
+              <!-- <span class="ms-2 badge rounded-pill text-bg-primary small">50% off</span> -->
+            </a>
+
+            <a class="nav-link-x" href="profile.html">
+              <span class="x-nav__icon"><i class="fa-regular fa-user"></i></span>
+              <span class="x-nav__text">Profile</span>
+            </a>
+
+            <a class="nav-link-x" href="#">
+              <span class="x-nav__icon"><i class="fa-solid fa-ellipsis"></i></span>
+              <span class="x-nav__text">More</span>
+            </a>
+          </nav>
+
+          <button class="btn btn-light fw-bold rounded-pill w-100 mt-3">Post</button>
+
+          <div class="d-flex align-items-center gap-2 mt-auto p-2 rounded-pill hover-dark">
+            <div class="avatar-sm">
+              <img src="bobb.jpg">
+            </div>
+            <div class="flex-grow-1">
+              <div class="fw-bold small">spida123</div>
+              <div class="text-secondary small">@lol12345120</div>
+            </div>
+            <i class="fa-solid fa-ellipsis text-secondary"></i>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- MIDDLE FEED -->
+     <main class="col-12 col-md-6 col-lg-6 col-xl-5 border-end border-dark">
+        <div class="sticky-top bg-black border-bottom border-dark d-flex">
+          <button class="tab-x active" type="button">For you</button>
+          <button class="tab-x" type="button">Following</button>
+        </div>
+
+        <div class="p-3 border-bottom border-dark">
+          <div class="d-flex gap-3">
+            <img src="profile.jpg" alt="man city" class="avatar-md">
+            <input class="form-control bg-black border-0 text-white fs-5" placeholder="What’s happening?">
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+           
+            <div class="composer-actions">
+            <button class="composer-btn" type="button" aria-label="Media">
+              <i class="fa-regular fa-image"></i>
+            </button>
+
+            <button class="composer-btn" type="button" aria-label="GIF">
+              <i class="fa-solid fa-film"></i>
+            </button>
+
+            <button class="composer-btn" type="button" aria-label="Poll">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+
+            <button class="composer-btn" type="button" aria-label="Emoji">
+              <i class="fa-regular fa-face-smile"></i>
+            </button>
+
+            <button class="composer-btn" type="button" aria-label="Schedule">
+              <i class="fa-regular fa-calendar"></i>
+            </button>
+
+            <button class="composer-btn" type="button" aria-label="Location">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+            <button class="btn btn-light rounded-pill fw-bold px-4" type="button">Post</button>
+          </div>
+        </div>
+
+
+      <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+      <img src="fabrizio romano.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Fabrizio Romano</span>
+        <i class="fa-solid fa-circle-check text-primary"></i>
+        <span>@FabrizioRomano</span>
+        <span>·</span>
+        <span>12h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🚨 Atlético Madrid advance to next UCL stage — Club Brugge are out! 
+          <br><br>
+          Who’s been your Man of the Match?
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="sorloth.jpg" alt="Tweet image">
+      </div>
+
+      <div class="tweet-actions d-flex justify-content-between small">
+        <div class="action comment" data-label="Reply"><i class="fa-regular fa-comment"></i></div>
+        <div class="action repost" data-label="Repost"><i class="fa-solid fa-retweet"></i></div>
+        <div class="action like" data-label="Like"><i class="fa-regular fa-heart"></i></div>
+        <div class="action view" data-label="View"><i class="fa-solid fa-chart-simple"></i></div>
+        <div class="action bookmark" data-label="Bookmark"><i class="fa-regular fa-bookmark"></i></div>
+        <div class="action share" data-label="Share"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+         
+          
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+      <img src="gyokeres.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Arsenal Updates</span>
+        <span>@ArsenalDaily</span>
+        <span>·</span>
+        <span>2h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>That second half was pure chaos😭</p>
+      </div>
+
+      <div class="tweet-actions d-flex justify-content-between small">
+        <div class="action comment" data-label="Reply">
+          <i class="fa-regular fa-comment"></i>
+        </div>
+
+        <div class="action repost" data-label="Repost">
+          <i class="fa-solid fa-retweet"></i>
+        </div>
+
+        <div class="action like" data-label="Like">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+        <div class="action view" data-label="View">
+          <i class="fa-solid fa-chart-simple"></i>
+        </div>
+
+        <div class="action bookmark" data-label="Bookmark">
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+
+        <div class="action share" data-label="Share">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+      </div> <!-- ✅ CLOSE tweet-actions -->
+    </div>   <!-- close flex-grow-1 -->
+  </div>     <!-- close d-flex gap-3 -->
+</div>
+
+
+          <div class="p-3 border-bottom border-dark tweet-hover">
+    <div class="d-flex gap-3">
+      <div class="avatar-md">
+      <img src="carrick.jpg" alt="Profile picture">
+      </div>
+
+      <div class="flex-grow-1">
+        <div class="d-flex align-items-center gap-2 small text-secondary">
+          <span class="fw-bold text-white">(fan) Frank 🧠🇾🇪</span>
+          <span>@FrankEra_</span>
+          <span>·</span>
+          <span>15h</span>
+          <i class="fa-solid fa-ellipsis ms-auto"></i>
+        </div>
+
+        <div class="mt-2">
+          <p>
+            🚨🏴󠁧󠁢󠁥󠁮󠁧󠁿 | NEW:
+            <br>
+            <br>
+            Manchester United have joined the Premier League clubs monitoring Morgan Gibbs-White’s situation at Nottingham Forest.
+          </p>
+        </div>
+
+        <div class="tweet-actions d-flex justify-content-between small">
+
+                <div class="action comment" data-label="Reply">
+                  <i class="fa-regular fa-comment"></i>
+                </div>
+
+                <div class="action repost" data-label="Repost">
+                  <i class="fa-solid fa-retweet"></i>
+                </div>
+
+                <div class="action like" data-label="Like">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <div class="action view" data-label="View">
+                  <i class="fa-solid fa-chart-simple"></i>
+                </div>
+
+                <div class="action bookmark" data-label="Bookmark">
+                  <i class="fa-regular fa-bookmark"></i>
+                </div>
+
+                <div class="action share" data-label="Share">
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+                
+                </div>
+                
+      </div>
+    </div>
+  </div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="focal.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL Focal</span>
+        <span>@FPLFocal</span>
+        <span>·</span>
+        <span>8h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Top 10K's TWAT (The Worst Active Team) finished with 19 points after a -4 in GW27 😬 
+          <br>
+          <br>
+          1.9K 🔻 10K
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="fpl.jpg" alt="Tweet image">
+      </div>
+
+    
+
+      <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="ltfpl.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Andy</span>
+        <span>@LetsTalk_FPL</span>
+        <span>·</span>
+        <span>8h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Everton haven’t done anything wrong because there’s no rule against this really, and other teams do it too.
+          <br>
+          <br>
+          But the whole thing does seem a little silly. 
+          <br>
+          <br>
+          It’s not even just how much pressure you can put on the keeper, it’s the amount of times the ref has to talk to players which slows the whole game down. 
+          <br>
+          <br>
+          Not sure what the best way is to fix it, outside of a much smaller box inside the 6 yard box that no one can go into to impact the keeper. 
+          <br>
+          <br>
+          Not sure if that would have bad knock on effects to set pieces overall though.
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="united.jpg" alt="Tweet image">
+      </div>
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="jake morrison.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Jake JakeMorrisonNBA</span>
+        <span>@JakeMorrisonNBA</span>
+        <span>·</span>
+        <span>15h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          BREAKING: Chet Holmgren has come out as gay. He is the first active gay NBA player and marks a major step towards the right direction. Holmgren plans to play with a rainbow armband to spread awareness.
+          <br>
+          <br>
+          Holmgren hopes this inspires other basketball players to come out.  
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="chet.jpg" alt="Tweet image">
+      </div>
+
+      
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="foden.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FodenRole</span>
+        <span>@SanesBurner</span>
+        <span>·</span>
+        <span>17h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+           "Oh no, my crops are too green, my harvest is too bountiful" ahh sqaud.
+        </p>
+      </div>
+
+      
+       <div class="tweet-media my-2">
+        <img src="city.jpg" alt="Tweet image">
+      </div>
+
+
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl frasier.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL Frasier</span>
+        <span>@FPLfrasier</span>
+        <span>·</span>
+        <span>35m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+         Non-penalty goals per 90 in the PL this season 
+          <br>
+          <br>
+            Ekitike — 0.56
+            <br>
+            Sesko — 0.55
+            <br>
+            Pedro — 0.50
+            <br>
+            Gyokeres — 0.42
+            <br>
+            Woltemade — 0.37
+            <br>
+            Wissa — 0.22
+            <br>
+            Delap — 0.12
+        </p>
+      </div>
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl tactician.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Andy Martin</span>
+        <span>@fpl_tactician</span>
+        <span>·</span>
+        <span>3h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          12m GW rank followed by 10m GW rank.
+          <br>
+          <br>
+          Feels awful. Bruno, Rogers, Enzo, Sarr and Ekitike blanking back to back.
+        </p>
+      </div>
+
+
+       <div class="tweet-media my-2">
+        <img src="maurice dancers.jpg" alt="Tweet image">
+      </div>
+
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fantasy football fix.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Fantasy Football Fix</span>
+        <span>@FantasyFootyFix</span>
+        <span>·</span>
+        <span>21m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Ekitiké last 3 GWs:
+          <br>
+          <br>
+
+            👟 9 shots
+            <br>
+            📦 8 in the box
+            <br>
+            📈 4 big chances
+            <br>
+            📊 2.0 xG
+            <br>
+            🚫 0 goals
+            <br>
+            <br>
+            Over 20k transfers out… but with WHU (H), WOL (A) and TOT (H) up next, are you really selling?
+            <br>
+            <br>
+            Stick or sell? 🤔
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="ekitike.jpg" alt="Tweet image">
+      </div>
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="craig hope.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Craig Hope</span>
+        <span>@CraigHope_DM</span>
+        <span>·</span>
+        <span>35m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🚨 NUFC TEAM NEWS vs Qarabag... Woltemade continues in midfield, Osula starts up front
+          <br>
+          <br>
+              🇦🇿 Ramsdale; Trippier, Botman, Burn, A Murphy; Woltemade, Tonali, Joelinton; J Murphy, Osula, Barnes
+        </p>
+      </div>
+
+        <div class="tweet-media my-2">
+        <img src="woltemade.jpg" alt="Tweet image">
+      </div>
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="alex vollo.png" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Alex Vollo</span>
+        <span>@AlexVolloFPL</span>
+        <span>·</span>
+        <span>11m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Seeing a lot of Schade vs Dango debates framed purely around positional charts, but let's actually look at what the numbers are telling us👇
+          <br>
+          <br>
+          When you look at Burnley's defensive profile, the obvious reaction is to target the flanks. But once you split the data properly, the picture becomes more nuanced, and that's where the decision between Schade and Ouattara gets interesting.
+          <br>
+          <br>
+          Burnley have been one of the most vulnerable sides in the league when it comes to expected threat conceded to left wingers. That means teams are able to progress down that side. Territory is gained. The ball moves into valuable zones. Those are sustained advancement. Structurally, that flank can be built against.
+          <br>
+          <br>
+          On the other side, the profile shifts. Against right wingers, Burnley don't concede especially high expected threat. The progression numbers are fairly average. But xG conceded to right wingers is among the highest in the league. That split matters, let me explain you why.
+          <br>
+          <br>
+          High xT conceded suggests repeated entries into dangerous areas, sustained pressure, volume, involvement. High xG conceded without high xT suggests something fewer situations, but more decisive ones: isolation, transitions, all that stuff. Moments that skip buildup and go straight to shots.
+          <br>
+          <br>
+          So it’s always not just about "which side is weaker?" It’s about what kind of weakness exists. Especially if we're talking about predicting events.
+          <br>
+          <br>
+          Schade is at his best when he can attack space repeatedly. When his side can pin the opposition back and progress down the flank. When he gets multiple touches in advanced zones and can build rhythm into his game. Burnley's right-side profile hints at exactly that kind of scenario.
+          <br>
+          <br>
+          Ouattara fits a different script. He doesn't necessarily need territory. If Burnley's left side collapses in moments, particularly when isolated or caught in transition, that aligns with a winger who thrives on direct, shot-heavy actions rather than volume.
+          <br>
+          <br>
+          So it becomes a question of match state. If you expect Brentford to dominate possession and control territory, Schade likely sees more involvement. If the game opens up, becomes transitional, or features isolated duels, Ouattara's side may produce the higher-value chances.
+          <br>
+          <br>
+          Historically, Burnley's outcomes in those two game states look very different. That's why I always say that when we look at numbers, we always need to contextualise them. Data only becomes useful when you understand the type of situation it's describing. Otherwise, it's just garbage numbers.
+        </p>
+      </div>
+
+        <div class="tweet-media my-2">
+        <img src="schade.png" alt="Tweet image">
+      </div>
+
+
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl updates.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL Updates&Tips 25/26</span>
+        <span>@FPLUpdates_Tips</span>
+        <span>·</span>
+        <span>4h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          you get what you pay for , no more no less
+          <br>
+          <br>
+          £5.4m , 4.8 points per start. 🤝
+
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="anderson.jpg" alt="Tweet image">
+      </div>
+
+
+   <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fabrizio romano.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Fabrizio Romano</span>
+        <span>@FabrizioRomano</span>
+        <span>·</span>
+        <span>9h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🚨 Kylian Mbappé could miss Real Madrid vs Benfica game tomorrow, L'Équipe reports.
+          <br>
+          <br>
+          Kylian feels pain in his left knee and could be out tomorrow.
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="mbappe.jpg" alt="Tweet image">
+      </div>
+
+
+
+  <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="nba.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">NBA</span>
+        <span>@NBA</span>
+        <span>·</span>
+        <span>15m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Like we said... disrupts 🤯
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="wemby.jpg" alt="Tweet image">
+      </div>
+
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="legion hoops.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Legion Hoops</span>
+        <span>@LegionHoops</span>
+        <span>·</span>
+        <span>3h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          BREAKING: LeBron James is the first player in NBA History to reach 43,000 points 
+          <br>
+          <br>
+          One of one. 👑
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="lebron.jpg" alt="Tweet image">
+      </div>
+
+
+
+  <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="iverson.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Hoops</span>
+        <span>@Hoopss</span>
+        <span>·</span>
+        <span>55m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          This is still the coldest moment in NBA history🥶
+        </p>
+      </div>
+
+        <div class="tweet-media my-2">
+        <img src="kobe.jpg" alt="Tweet image">
+      </div>
+
+
+   <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="celtics.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Boston Celtics</span>
+        <span>@celtics</span>
+        <span>·</span>
+        <span>4h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Injury Report update:
+          <br>
+          <br>
+          Jaylen Brown - Right Knee Contusion - OUT
+          <br>
+          Jayson Tatum - Right Achilles Repair - OUT
+        </p>
+      </div>
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="doncic.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Luka Doncic</span>
+        <span>@LukaDoncic</span>
+        <span>·</span>
+        <span>6h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🚨 BREAKING NEWS: NBA player Luka Dončić, known as one of the best basketball players in the world, has been accused by several teammates of being an extremely kind and talented human being.
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="luka.jpg" alt="Tweet image">
+      </div>
+
+
+
+  <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="jordan.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Jordan Cronin</span>
+        <span>@jordancronin_</span>
+        <span>·</span>
+        <span>8h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Jacob Ramsey not involved tonight due to a tight hamstring.
+        </p>
+      </div>
+
+       <div class="tweet-media my-2">
+        <img src="ramsey.jpg" alt="Tweet image">
+      </div>
+
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="trey.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">(fan) Trey</span>
+        <span>@UTDTrey</span>
+        <span>·</span>
+        <span>2h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Look at Lookman bro 
+          <br>
+          <br>
+          SUPERSTAR🇳🇬
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="lookman.jpg" alt="Tweet image">
+      </div>
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="mufc mpb.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">mufcmpb</span>
+        <span>@mufcMPB</span>
+        <span>·</span>
+        <span>8h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🚨 Barcelona are making progress in talks with Marcus Rashford on his contract terms. Barça want to negotiate the €30m buy option clause - Manchester United’s message remains very clear: ‘If you want Rashford, pay €30m or the player is NOT joining’.
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="rashford.jpg" alt="Tweet image">
+      </div>
+
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="who scored.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">WhoScored</span>
+        <span>@WhoScored</span>
+        <span>·</span>
+        <span>25m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Iliman Ndiaye made a total of eight successful dribbles against Manchester United last night. No player has made more in a single Premier League game this season. 🤤
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="ndiaye.jpg" alt="Tweet image">
+      </div>
+
+
+   <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="underdog.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Underdog</span>
+        <span>@Underdog</span>
+        <span>·</span>
+        <span>3h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Jabari Smith's per game averages since the DMs leaked:
+          <br>
+          <br>
+          22.3 points
+          6.7 rebounds
+          3.4 stocks
+          68.4 FG%
+          54.5 3P%
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="jabari smith.png" alt="Tweet image">
+      </div>
+
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="kalshi hoops.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Kalshi Hoops</span>
+        <span>@KalshiHoops</span>
+        <span>·</span>
+        <span>11m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+            The Ringer's Updated Top-20 NBA Players:
+          <br>
+          <br>
+            1. Jokic
+            <br>
+            2. SGA
+            <br>
+            3. Wemby
+            <br>
+            4. Luka
+             <br>
+            5. Giannis
+             <br>
+            6. Edwards
+             <br>
+            7. Kawhi
+            <br>
+            8. Curry
+             <br>
+            9. Cade
+             <br> 
+            10. Mitchell
+             <br>
+            11. Brown
+             <br>
+            12. Brunson
+             <br>
+            13. Maxey
+             <br>
+            14. Durant
+             <br>
+            15. Murray
+             <br>
+            16. Booker
+             <br>
+            17. Barnes
+             <br>
+            18. Harden
+             <br>
+            19. Avdija
+             <br>
+            20. Johnson
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="wemby 2.jpg" alt="Tweet image">
+      </div>
+
+
+   <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl olympian.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL Olympian</span>
+        <span>@FPLOlympian</span>
+        <span>·</span>
+        <span>33m</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+            My predictions for the title, top 4, and relegation:
+            <br>
+            <br>
+            🏆 Title - City (Arsenal to bottle it again)
+            <br>
+            <br>
+            🔝 Top 4 - City, Arsenal, United, Liverpool
+            <br>
+            <br>
+            ❌ Relegation - West Ham
+        </p>
+      </div>
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl alerts.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL Alerts</span>
+        <span>@FPL_Alerts</span>
+        <span>·</span>
+        <span>5h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          🤑 Price Warning! ⚠
+          <br>
+          🔴 Poential Price Fall ⬇
+          <br>
+          <br>
+          J.Timber (ARS)
+          <br>
+          Cucurella (CHE)
+        </p>
+      </div>
+
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="dougie.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Dougie Critchley</span>
+        <span>@DougieCritchley</span>
+        <span>·</span>
+        <span>11h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+            Alexander Sørloth this was a massive night for Atleti and you’ve really stepped up.
+            <br>
+            <br>
+            26 goals, 24 goals and now 15 goals in his last 3 seasons, he’s one of the most underrated penalty box operators in Europe.
+        </p>
+      </div>
+
+    <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fantasy football hub.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Fantasy Football Hub</span>
+        <span>@FFH_HQ</span>
+        <span>·</span>
+        <span>15h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          28 points in his last two games...
+          <br>
+          <br>
+          Virgil has three great fixtures coming up 👇
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="virgil.jpg" alt="Tweet image">
+      </div>
+
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+               <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="tnt sports.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Football on TNT Sports</span>
+        <span>@footballontnt</span>
+        <span>·</span>
+        <span>13h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Jan Oblak now has more assists (1) in the Champions League this season than… 🅰️
+          <br>
+          <br>
+          🏴󠁧󠁢󠁥󠁮󠁧󠁿 Harry Kane
+          <br>
+          🇳🇴 Erling Haaland
+          <br>
+          🇫🇷 Desire Doue
+          <br>
+          🇫🇷 Rayan Cherki
+          <br>
+          🏴󠁧󠁢󠁥󠁮󠁧󠁿 Noni Madueke
+          <br>
+          🇧🇷 Estevão
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="oblak.jpg" alt="Tweet image">
+      </div>
+
+
+      <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="nba.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">NBA</span>
+        <span>@NBA</span>
+        <span>·</span>
+        <span>12h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+            ANT EDWARDS: SCORING MACHINE 🔥
+            <br>
+            <br>
+            The NBA’s 3rd leading scorer Anthony Edwards (29.5 PPG) leads the Timberwolves into Portland to take on Jrue Holiday and the Trail Blazers!
+            <br>
+            <br>
+            10:00pm/et on Peacock
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="edwards.jpg" alt="Tweet image">
+      </div>
+
+
+     <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="fpl 420.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">FPL 420 </span>
+        <span>@420fpl</span>
+        <span>·</span>
+        <span>16h</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="anderson 2.jpg" alt="Tweet image">
+      </div>
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="onyx.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Onyx</span>
+        <span>@OnyxOdds</span>
+        <span>·</span>
+        <span>Feb 24</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Kawhi Leonard has had maybe the strangest career ever:
+          <br>
+          <br>
+          - 12 PPG for his first 4 years
+          <br>
+          - Won DPOY and Finals MVP before making an ASG
+          <br>
+          - Only played 65% of games
+          <br>
+          - 1 of 3 players ever with FMVPs for multiple teams
+          <br>
+          - Randomly quit on the Spurs
+          <br>
+          - Top 50 player in NBA history
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="kawhi.jpg" alt="Tweet image">
+      </div>
+
+<div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="p-3 border-bottom border-dark tweet-hover">
+  <div class="d-flex gap-3">
+    <div class="avatar-md">
+    <img src="hoop central.jpg" alt="Profile picture">
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex align-items-center gap-2 small text-secondary">
+        <span class="fw-bold text-white">Hoop Central</span>
+        <span>@TheHoopCentral</span>
+        <span>·</span>
+        <span>Feb 24</span>
+        <i class="fa-solid fa-ellipsis ms-auto"></i>
+      </div>
+
+      <div class="mt-2">
+        <p>
+          Cade Cunningham tonight:
+          <br>
+          <br>
+          16 Points
+          <br>
+          10 Assists 
+          <br>
+          6 Rebounds
+          <br> 
+          3 Blocks
+          <br>
+          2 Steals
+          <br>
+          5/26 FGM
+          <br>
+          35 Minutes
+        </p>
+      </div>
+
+      <div class="tweet-media my-2">
+        <img src="cade.jpg" alt="Tweet image">
+      </div>
+
+
+      <div class="tweet-actions d-flex justify-content-between small">
+
+              <div class="action comment" data-label="Reply">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+
+              <div class="action repost" data-label="Repost">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+
+              <div class="action like" data-label="Like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <div class="action view" data-label="View">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+
+              <div class="action bookmark" data-label="Bookmark">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+
+              <div class="action share" data-label="Share">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+        <div style="height:1000px"></div>
+      </main>
+
+
+
+    <!-- RIGHT SIDEBAR -->
+<aside class="col-lg-3 col-xl-3 d-none d-lg-block">
+  <!-- THIS is what "stops" -->
+  <div class="right-sticky pt-3">
+
+    <!-- Search -->
+<!-- Search (CSS-only dropdown) -->
+<div class="search-wrap mb-3">
+  <div class="search-pill">
+    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+    <input class="search-input" type="text" placeholder="Search" autocomplete="off">
+  </div>
+
+  <!-- Recent dropdown -->
+  <div class="search-dd">
+    <div class="search-dd__head">
+      <div class="fw-bold">Recent</div>
+      <a href="#" class="search-dd__clear">Clear all</a>
+    </div>
+
+    <div class="search-dd__list">
+      <a class="search-dd__item" href="#">
+        <div class="recent-pic">
+          <img src="fantasy football scout.png">
+        </div>
+        <div class="recent-meta">
+          <div class="recent-name fw-bold">
+            Fantasy Football Scout <i class="fa-solid fa-circle-check text-primary"></i>
+          </div>
+          <div class="recent-handle text-secondary">@FFScout</div>
+        </div>
+        <span class="recent-x"><i class="fa-solid fa-xmark"></i></span>
+      </a>
+
+      <a class="search-dd__item" href="#">
+        <div class="recent-pic recent-pic--2">
+          <img src="legion hoops.jpg">
+        </div>
+        <div class="recent-meta">
+          <div class="recent-name fw-bold">
+            Legion Hoops <i class="fa-solid fa-circle-check text-primary"></i>
+          </div>
+          <div class="recent-handle text-secondary">@LegionHoops</div>
+        </div>
+        <span class="recent-x"><i class="fa-solid fa-xmark"></i></span>
+      </a>
+
+      <a class="search-dd__item" href="#">
+        <div class="recent-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="recent-meta">
+          <div class="recent-name">nba</div>
+        </div>
+        <span class="recent-x"><i class="fa-solid fa-xmark"></i></span>
+      </a>
+
+      <a class="search-dd__item" href="#">
+        <div class="recent-pic recent-pic--3">
+          <img src="drake.png">
+        </div>
+        <div class="recent-meta">
+          <div class="recent-name fw-bold">
+            Drizzy <i class="fa-solid fa-circle-check text-primary"></i>
+          </div>
+          <div class="recent-handle text-secondary">@Drake</div>
+        </div>
+        <span class="recent-x"><i class="fa-solid fa-xmark"></i></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Everything below scrolls UNTIL it sticks -->
+    <div class="right-stack">
+
+      <!-- Subscribe Card -->
+      <div class="card-x mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="fw-bold m-0">Subscribe to Premium</h5>
+          <span class="pill-green"></span>
+        </div>
+
+        <p class="text-secondary small mt-2 mb-3">
+          Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+        </p>
+
+        <button class="btn btn-primary rounded-pill fw-bold px-4">Subscribe</button>
+      </div>
+
+      <!-- Today's News -->
+      <div class="card-x mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="fw-bold m-0">Today’s News</h5>
+        </div>
+
+        <a class="right-row" href="#">
+          <div class="fw-bold mt-3">
+            Kylian Mbappé Interrupts Training Session Due to Left Knee Pain
+          </div>
+          <div class="text-secondary small mt-2">12 hours ago · Sports</div>
+        </a>
+
+        <a class="right-row" href="#">
+          <div class="fw-bold mt-3">
+            Manchester United Appoints Michael Carrick as Interim Manager
+          </div>
+          <div class="text-secondary small mt-2">13 hours ago · Sports · 890 posts</div>
+        </a>
+
+        <a class="right-row" href="#">
+          <div class="fw-bold mt-3">
+            Premier League Young Star Debate Sparks After Latest Stats Drop
+          </div>
+          <div class="text-secondary small mt-2">1 day ago · Sports · 1,789 posts</div>
+        </a>
+      </div>
+
+      <!-- Trending -->
+      <div class="card-x mb-3">
+        <h5 class="fw-bold m-0">What’s happening</h5>
+
+        <a class="trend-row" href="#">
+          <div>
+            <div class="text-secondary small">Sports · Trending</div>
+            <div class="fw-bold">Ademola Lookman</div>
+          </div>
+          <i class="fa-solid fa-ellipsis text-secondary"></i>
+        </a>
+
+        <a class="trend-row" href="#">
+          <div>
+            <div class="text-secondary small">Trending in Nigeria</div>
+            <div class="fw-bold">Blord</div>
+          </div>
+          <i class="fa-solid fa-ellipsis text-secondary"></i>
+        </a>
+
+        <a class="trend-row" href="#">
+          <div>
+            <div class="text-secondary small">Trending</div>
+            <div class="fw-bold">Dollar</div>
+          </div>
+          <i class="fa-solid fa-ellipsis text-secondary"></i>
+        </a>
+
+        <a class="show-more" href="#">Show more</a>
+      </div>
+
+      <!-- Who to follow -->
+      <div class="card-x mb-3">
+        <h5 class="fw-bold m-0">Who to follow</h5>
+
+        <div class="follow-row">
+          <div class="follow-pic"></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Steve Parish</div>
+            <div class="text-secondary small">@CEO4TAG</div>
+          </div>
+          <button class="btn btn-light btn-sm rounded-pill fw-bold px-3">Follow</button>
+        </div>
+
+        <div class="follow-row">
+          <div class="follow-pic f2"></div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Underdog WNBA</div>
+            <div class="text-secondary small">@UnderdogWNBA</div>
+          </div>
+          <button class="btn btn-light btn-sm rounded-pill fw-bold px-3">Follow</button>
+        </div>
+
+        <a class="show-more" href="#">Show more</a>
+      </div>
+
+      <!-- Footer -->
+      <div class="right-footer small text-secondary mb-4">
+        <a href="#">Terms of Service</a> ·
+        <a href="#">Privacy Policy</a> ·
+        <a href="#">Cookie Policy</a> ·
+        <a href="#">Accessibility</a> ·
+        <a href="#">Ads info</a> ·
+        <a href="#">More</a>
+        <div class="mt-2">© 2026 X Corp.</div>
+      </div>
+
+    </div>
+  </div>
+</aside>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

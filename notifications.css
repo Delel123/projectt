@@ -1,0 +1,334 @@
+/* notifications.css */
+/* ========== GLOBAL (match home.css behavior) ========== */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  color: inherit;
+  text-decoration: none;
+}
+
+body{
+  background:#000;
+  color:#e7e9ea;
+}
+
+/* ========== LEFT SIDEBAR (copied to match home) ========== */
+.logo-pill{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+}
+.logo-pill:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+.nav-link-x{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  line-height:1;
+}
+.nav-link-x:hover{
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+}
+.nav-link-x.active .x-nav__text{
+  font-weight:800;
+}
+
+.x-nav__icon{
+  width:28px;
+  display:flex;
+  justify-content:center;
+  font-size:20px;
+}
+
+/* small badge for notifications */
+.badge-x{
+  position:absolute;
+  top:6px;
+  left:22px;
+  background:#1d9bf0;
+  color:#fff;
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:999px;
+}
+
+.hover-dark:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+
+.avatar-sm{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;      /* VERY IMPORTANT */
+  flex-shrink:0;
+  background:#222;
+}
+
+.avatar-sm img{
+  width:100%;
+  height:100%;
+  object-fit:cover;     /* prevents stretching */
+  display:block;
+}
+/* ========== MIDDLE HEADER TABS (match home tab style) ========== */
+.tab-x{
+  flex:1;
+  padding:14px 0;
+  border:none;
+  background:transparent;
+  color:#fff;
+  font-weight:700;
+}
+.tab-x.active{
+  border-bottom:3px solid #1d9bf0;
+}
+
+/* gear button */
+.icon-pill{
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  border:none;
+  background:transparent;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.icon-pill:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+/* ========== NOTIFICATIONS LIST (your notifications-specific styles) ========== */
+.notif-row{
+  position:relative;
+  border-bottom:1px solid rgba(255,255,255,0.10);
+}
+.notif-row:hover{
+  background:rgba(255,255,255,0.03);
+}
+
+.notif-left{
+  width:42px;
+  float:left;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding-top:2px;
+}
+.notif-body{
+  margin-left:42px;
+  min-width:0;
+}
+.notif-icon{
+  font-size:26px;
+}
+
+.spark{
+  width:28px;
+  height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:#a855f7;
+}
+
+/* stacked avatars */
+.stack-avatars{
+  display:flex;
+  align-items:center;
+}
+.stack-av{
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  border:2px solid #000;
+  margin-left:-8px;
+}
+.stack-av:first-child{ margin-left:0; }
+.stack-av.a1{ background: linear-gradient(140deg,#00bbf9,#f15bb5); }
+.stack-av.a2{ background: linear-gradient(140deg,#8338ec,#ff006e); }
+.stack-av.a3{ background: linear-gradient(140deg,#06d6a0,#118ab2); }
+.stack-av.a4{ background: linear-gradient(140deg,#f59e0b,#ef4444); }
+
+/* avatars + previews */
+.avatar-circle{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;      /* IMPORTANT */
+  flex:0 0 40px;        /* prevents stretching */
+  background:#222;
+}
+
+.avatar-circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;     /* prevents stretching */
+  display:block;
+}
+
+.av1{ background: radial-gradient(circle at 30% 30%, #fff2, transparent 55%), linear-gradient(140deg,#ef4444,#f59e0b); }
+.av2{ background: radial-gradient(circle at 30% 30%, #fff2, transparent 55%), linear-gradient(140deg,#00bbf9,#f15bb5); }
+.av3{ background: radial-gradient(circle at 30% 30%, #fff2, transparent 55%), linear-gradient(140deg,#22c55e,#06b6d4); }
+.av4{ background: radial-gradient(circle at 30% 30%, #fff2, transparent 55%), linear-gradient(140deg,#a855f7,#6366f1); }
+
+.mini-preview{
+  width:54px;
+  height:54px;
+  border-radius:14px;
+  border:1px solid #2f3336;
+  background: radial-gradient(circle at 30% 30%, #fff2, transparent 55%), linear-gradient(140deg,#22c55e,#06b6d4);
+}
+
+.more-dot{
+  position:absolute;
+  right:10px;
+  top:10px;
+  width:36px;
+  height:36px;
+  border:none;
+  background:transparent;
+  color:#71767b;
+  border-radius:999px;
+}
+.more-dot:hover{
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+}
+
+/* ========== RIGHT SIDEBAR (match home) ========== */
+.search-pill{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#16181c;
+  border-radius:999px;
+  padding:10px 14px;
+}
+.search-pill input{
+  border:none;
+  background:transparent;
+  color:#fff;
+  width:100%;
+  outline:none;
+}
+
+.card-x{
+  background:black;
+  border-radius:16px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+/* right stack */
+.right-stack{
+  display:flex;
+  flex-direction:column;
+}
+
+/* this makes the right sidebar scroll with the page, then "stop" like home */
+.right-sticky{
+  position: sticky;
+  top: 12px;
+  align-self: flex-start;
+}
+
+/* rows in trends (same pattern as home’s right side) */
+.trend-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.trend-row:first-of-type{
+  border-top:none;
+}
+
+.show-more{
+  display:inline-block;
+  margin-top:8px;
+  color:#1d9bf0;
+}
+
+.follow-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.follow-row:first-of-type{
+  border-top:none;
+}
+
+.follow-pic{
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  background: linear-gradient(140deg,#00bbf9,#f15bb5);
+  border:1px solid rgba(255,255,255,0.08);
+  flex:0 0 40px;
+}
+.follow-pic.f2{ background: linear-gradient(140deg,#8338ec,#ff006e); }
+.follow-pic.f3{ background: linear-gradient(140deg,#06d6a0,#118ab2); }
+
+.right-footer{
+  margin-bottom:40px;
+}
+.right-footer a{
+  color:rgb(113,118,123);
+}
+
+.follow-pic{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 40px;   /* prevents stretching */
+  border:1px solid #2f3336;
+}
+
+.stack-avatars{
+  display:flex;
+}
+
+.stack-av{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  overflow:hidden;            /* crops image */
+  border:2px solid #000;      /* X-style overlap border */
+  margin-left:-8px;           /* overlap effect */
+  background:#222;
+}
+
+.stack-av:first-child{
+  margin-left:0;
+}
+
+.stack-av img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
